@@ -2,7 +2,7 @@
 # IpaExporter
   IpaExporter is a plugin for Xcode. The plugin can export the IPA file from the archive in the Orgnaizer window.
 
-  ![image](https://github.com/poboke/IpaExporter/raw/master/Screenshots/about.png)
+  ![image](https://github.com/poboke/IpaExporter/raw/master/Screenshots/tutorial.gif)
 
   If you want to export the IPA file from the archive, you can open the Organizer window, click the "Plugins" menu, and click the "Export Ipa..." sub menu.
 
