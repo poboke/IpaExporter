@@ -26,8 +26,8 @@
     [IpaExporter sharedPlugin].enableExportMenuItem = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(receiveWindowDidCloseNotification:)
-                                                 name:@"NSWindowDidCloseNotification"
+                                             selector:@selector(receiveWindowWillCloseNotification:)
+                                                 name:@"NSWindowWillCloseNotification"
                                                object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -37,13 +37,14 @@
 }
 
 
-- (void)receiveWindowDidCloseNotification:(NSNotification *)notification
+- (void)receiveWindowWillCloseNotification:(NSNotification *)notification
 {
     NSWindow *window = notification.object;
     if ([window.windowController isMemberOfClass:NSClassFromString(@"IDEProductsWindowController")]) {
         // Disable the menu item
         [IpaExporter sharedPlugin].enableExportMenuItem = NO;
         [[NSNotificationCenter defaultCenter] removeObserver:self name:ExportIpaNotification object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"NSWindowWillCloseNotification" object:nil];
     }
 }
 
