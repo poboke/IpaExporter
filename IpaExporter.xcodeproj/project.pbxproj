@@ -10,7 +10,7 @@
 		C53992471C008438008CB536 /* DVTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53992461C008438008CB536 /* DVTKit.framework */; };
 		C539924A1C008514008CB536 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53992491C008514008CB536 /* IDEKit.framework */; };
 		C54A48921C02D41C0071B659 /* IDEFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54A48911C02D41C0071B659 /* IDEFoundation.framework */; };
-		C59604FC1C034D7800F1135C /* IDEArchivesViewController+Hook.m in Sources */ = {isa = PBXBuildFile; fileRef = C59604FB1C034D7800F1135C /* IDEArchivesViewController+Hook.m */; };
+		C552CA111C7EB1820014444C /* IDEArchivesViewController+IpaExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = C552CA101C7EB1820014444C /* IDEArchivesViewController+IpaExporter.m */; };
 		C5A181DB1C00270600E66ED0 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A181DA1C00270600E66ED0 /* AppKit.framework */; };
 		C5A181DD1C00270600E66ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A181DC1C00270600E66ED0 /* Foundation.framework */; };
 		C5A181E41C00270600E66ED0 /* IpaExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A181E31C00270600E66ED0 /* IpaExporter.m */; };
@@ -27,9 +27,9 @@
 		C53992581C00C1C5008CB536 /* IDEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEViewController.h; sourceTree = "<group>"; };
 		C548D30A1C00ED42000DC5C0 /* IDEArchivesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEArchivesViewController.h; sourceTree = "<group>"; };
 		C54A48911C02D41C0071B659 /* IDEFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IDEFoundation.framework; path = /Applications/Xcode.app/Contents/Frameworks/IDEFoundation.framework; sourceTree = "<group>"; };
+		C552CA0F1C7EB1820014444C /* IDEArchivesViewController+IpaExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEArchivesViewController+IpaExporter.h"; sourceTree = "<group>"; };
+		C552CA101C7EB1820014444C /* IDEArchivesViewController+IpaExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDEArchivesViewController+IpaExporter.m"; sourceTree = "<group>"; };
 		C5689E191C00DFF500A5F0D5 /* DVTFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTFilePath.h; sourceTree = "<group>"; };
-		C59604FA1C034D7800F1135C /* IDEArchivesViewController+Hook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IDEArchivesViewController+Hook.h"; sourceTree = "<group>"; };
-		C59604FB1C034D7800F1135C /* IDEArchivesViewController+Hook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IDEArchivesViewController+Hook.m"; sourceTree = "<group>"; };
 		C59604FD1C0351C500F1135C /* IDEProductsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEProductsWindowController.h; sourceTree = "<group>"; };
 		C5A181D71C00270600E66ED0 /* IpaExporter.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IpaExporter.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A181DA1C00270600E66ED0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -61,8 +61,8 @@
 		C539922B1C0066E1008CB536 /* HookClasses */ = {
 			isa = PBXGroup;
 			children = (
-				C59604FA1C034D7800F1135C /* IDEArchivesViewController+Hook.h */,
-				C59604FB1C034D7800F1135C /* IDEArchivesViewController+Hook.m */,
+				C552CA0F1C7EB1820014444C /* IDEArchivesViewController+IpaExporter.h */,
+				C552CA101C7EB1820014444C /* IDEArchivesViewController+IpaExporter.m */,
 			);
 			path = HookClasses;
 			sourceTree = "<group>";
@@ -217,8 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5A181E41C00270600E66ED0 /* IpaExporter.m in Sources */,
-				C59604FC1C034D7800F1135C /* IDEArchivesViewController+Hook.m in Sources */,
 				C5A18D891C00C78900B1562D /* JRSwizzle.m in Sources */,
+				C552CA111C7EB1820014444C /* IDEArchivesViewController+IpaExporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

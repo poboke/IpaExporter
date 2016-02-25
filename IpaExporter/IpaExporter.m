@@ -7,7 +7,7 @@
 //
 
 #import "IpaExporter.h"
-#import "IDEArchivesViewController+Hook.h"
+#import "IDEArchivesViewController+IpaExporter.h"
 
 @interface IpaExporter ()
 
@@ -65,7 +65,7 @@
     
     [self addPluginsMenu];
     
-    [NSClassFromString(@"IDEArchivesViewController") Hook];
+    [NSClassFromString(@"IDEArchivesViewController") hookIpaExporter];
 }
 
 

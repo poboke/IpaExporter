@@ -1,26 +1,28 @@
 //
-//  IDEArchivesViewController+Hook.m
+//  IDEArchivesViewController+IpaExporter.m
 //  IpaExporter
 //
 //  Created by Jobs on 15/11/22.
 //  Copyright © 2015年 Jobs. All rights reserved.
 //
 
-#import "IDEArchivesViewController+Hook.h"
+#import "IDEArchivesViewController+IpaExporter.h"
 #import "IpaExporter.h"
 #import "IDEArchive.h"
 
-@implementation NSObject (IDEArchivesViewControllerHook)
+@implementation NSObject (IDEArchivesViewControllerIpaExporter)
 
-+ (void)Hook
++ (void)hookIpaExporter
 {
-    [self jr_swizzleMethod:@selector(viewDidLoad) withMethod:@selector(viewDidLoadHook) error:nil];
+    [self jr_swizzleMethod:@selector(viewDidLoad)
+                withMethod:@selector(ipaExporter_viewDidLoad)
+                     error:nil];
 }
 
 
-- (void)viewDidLoadHook
+- (void)ipaExporter_viewDidLoad
 {
-    [self viewDidLoadHook];
+    [self ipaExporter_viewDidLoad];
     
     // Enable the menu item
     [IpaExporter sharedPlugin].enableExportMenuItem = YES;

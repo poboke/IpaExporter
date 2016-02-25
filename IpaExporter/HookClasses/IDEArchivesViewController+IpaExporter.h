@@ -1,5 +1,5 @@
 //
-//  IDEArchivesViewController+Hook.h
+//  IDEArchivesViewController+IpaExporter.h
 //  IpaExporter
 //
 //  Created by Jobs on 15/11/22.
@@ -10,8 +10,8 @@
 
 static NSString * const ExportIpaNotification = @"ExportIpaNotification";
 
-@interface NSObject (IDEArchivesViewControllerHook)
+@interface NSObject (IDEArchivesViewControllerIpaExporter)
 
-+ (void)Hook;
++ (void)hookIpaExporter;
 
 @end
