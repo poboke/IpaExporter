@@ -16,7 +16,7 @@
 {
     [self jr_swizzleMethod:@selector(viewDidLoad)
                 withMethod:@selector(ipaExporter_viewDidLoad)
-                     error:nil];
+                     error:NULL];
 }
 
 
